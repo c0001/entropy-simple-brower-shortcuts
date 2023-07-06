@@ -1,0 +1,85 @@
+{
+  "manifest_version": 2,
+  "name": "entropy-simple-brower-shortcuts",
+  "version": "1.0",
+
+  "description": "a simple way to set sets of browser shortcuts",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/icons-48.png",
+    "default_title": "EntropySimpleBrowserShortcuts"
+  },
+
+  "commands": {
+    "tab-toggle": {  "description": "Send a 'tab-toggle' event" },
+    "viewsource": { "description": "viewsource" },
+    "print": { "description": "print" },
+    "nexttab": { "description": "nexttab" },
+    "prevtab": { "description": "prevtab" },
+    "firsttab": { "description": "firsttab" },
+    "lasttab": { "description": "lasttab" },
+    "newtab": { "description": "newtab" },
+    "reopentab": { "description": "reopentab" },
+    "closetab": { "description": "closetab" },
+    "clonetab": { "description": "clonetab" },
+    "movetabtonewwindow": { "description": "movetabtonewwindow" },
+    "onlytab": { "description": "onlytab" },
+    "closelefttabs" : { "description": "close left tabs" },
+    "closerighttabs": { "description": "close right tabs" },
+    "togglepin": { "description": "togglepin" },
+    "togglemute": { "description": "togglemute" },
+    "copyurl": { "description": "copyurl" },
+    "searchgoogle": { "description": "searchgoogle" },
+    "movetableft": { "description": "movetableft" },
+    "movetabright": { "description": "movetabright" },
+    "movetabtofirst": { "description": "movetabtofirst" },
+    "movetabtolast": { "description": "movetabtolast" },
+    "newwindow": { "description": "newwindow" },
+    "newprivatewindow": { "description": "newprivatewindow" },
+    "closewindow": { "description": "closewindow" },
+    "fullscreen": { "description": "fullscreen" },
+    "zoomin": { "description": "zoomin" },
+    "zoomout": { "description": "zoomout" },
+    "zoomreset": { "description": "zoomreset" },
+    "back": { "description": "back" },
+    "forward": { "description": "forward" },
+    "reload": { "description": "reload" },
+    "hardreload": { "description": "hardreload" },
+    "top": { "description": "top" },
+    "bottom": { "description": "bottom" },
+    "scrollup": { "description": "scrollup" },
+    "scrollupmore": { "description": "scrollupmore" },
+    "pageup": { "description": "pageup" },
+    "scrolldown": { "description": "scrolldown" },
+    "scrolldownmore": { "description": "scrolldownmore" },
+    "pagedown": { "description": "pagedown" },
+    "scrollleft": { "description": "scrollleft" },
+    "scrollleftmore": { "description": "scrollleftmore" },
+    "scrollright": { "description": "scrollright" },
+    "scrollrightmore": { "description": "scrollrightmore" }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "downloads",
+    "tabs",
+    "clipboardWrite",
+    "browsingData",
+    "bookmarks",
+    "sessions",
+    "management",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{9db427e0-9778-4a7d-bf27-3a232d534216}",
+      "strict_min_version": "60.0"
+    }
+  }
+}
