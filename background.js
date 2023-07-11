@@ -5,13 +5,13 @@ var currentTab = -1;
 function tabChanged(tabInfo) {
   lastTab = currentTab;
   currentTab = tabInfo.tabId;
-  console.log('entropy-simple-brower-shortcuts: Last tab id '
+  console.log('entropy-simple-browser-shortcuts: Last tab id '
     + lastTab + ", Current tab id " + currentTab);
 }
 browser.tabs.onActivated.addListener(tabChanged);
 
 function toggleRecentTab() {
-  console.log('entropy-simple-brower-shortcuts: Prepare toggle recent tab');
+  console.log('entropy-simple-browser-shortcuts: Prepare toggle recent tab');
   if (lastTab > -1) {
     console.log('--> toggle to tab id: ' + lastTab);
     browser.tabs.update(lastTab,{active: true});
@@ -76,7 +76,7 @@ let copyToClipboard = (text) => {
 // * main
 browser.commands.onCommand.addListener(function(command) {
   let smoothScrolling = 'auto'; // or 'smooth' as force smooth
-  console.log('entropy-simple-brower-shortcuts: Use command ' + command);
+  console.log('entropy-simple-browser-shortcuts: Use command ' + command);
   if (command == "tab-toggle") {
     toggleRecentTab();
   } else if (command == 'cleardownloads') {
@@ -149,7 +149,7 @@ browser.commands.onCommand.addListener(function(command) {
     })
   } else if (command == 'copyurl') {
     browser.tabs.query({currentWindow: true, active: true}).then(function(tab) {
-      console.log('entropy-simple-brower-shortcuts: copy url ' + tab[0].url)
+      console.log('entropy-simple-browser-shortcuts: copy url ' + tab[0].url)
       copyToClipboard(tab[0].url)
     })
   } else if (command == 'searchgoogle') {

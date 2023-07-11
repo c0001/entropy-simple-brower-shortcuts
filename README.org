@@ -1,4 +1,4 @@
-#+title: entropy-simple-brower-shortcuts
+#+title: entropy-simple-browser-shortcuts
 
 WebExtension to simply mapping sets of web browser functional set to
 shortcuts.
