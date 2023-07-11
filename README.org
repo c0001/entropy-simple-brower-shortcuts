@@ -1,0 +1,6 @@
+#+titile: entropy-simple-brower-shortcuts
+
+WebExtension to simply mapping sets of web browser functional set to
+shortcuts.
+
+Inspired by and fork basic functions from [[https://prod.outgoing.prod.webservices.mozgcp.net/v1/12e2f788f1bdde9c64f3afef23153608411c53de3620e6fd118a93baa51449f4/https%3A//github.com/mikecrittenden/shortkeys][Shortkeys]] and [[https://addons.mozilla.org/en-US/firefox/addon/tabtoggle/?utm_content=addons-manager-reviews-link&utm_medium=firefox-browser&utm_source=firefox-browser][TabToggle]].
